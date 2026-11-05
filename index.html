@@ -1,14 +1,249 @@
+
 <!DOCTYPE html>
-<html>
+
 <head>
-<title>Page Title</title>
-<script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: black;
+    }
+
+    #animation {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #animation img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
+
 <body>
-    <main>
-    </main>
-    <script src="sketch.js"></script>
-  </body>
-</html> 
+
+  <div id="animation">
+    <img id="frame" src="imagiologia/1.png">
+  </div>
+
+  <script>
+
+  
+    const images = [
+      "imagiologia/1.png",
+"imagiologia/2.png",
+"imagiologia/3.png",
+"imagiologia/4.png",
+"imagiologia/5.png",
+"imagiologia/6.png",
+"imagiologia/7.png",
+"imagiologia/8.png",
+"imagiologia/9.png",
+"imagiologia/10.png",
+"imagiologia/11.png",
+"imagiologia/12.png",
+"imagiologia/13.png",
+"imagiologia/14.png",
+"imagiologia/15.png",
+"imagiologia/16.png",
+"imagiologia/17.png",
+"imagiologia/18.png",
+"imagiologia/19.png",
+"imagiologia/20.png",
+"imagiologia/21.png",
+"imagiologia/22.png",
+"imagiologia/23.png",
+"imagiologia/24.png",
+"imagiologia/25.png",
+"imagiologia/26.png",
+"imagiologia/27.png",
+"imagiologia/28.png",
+"imagiologia/29.png",
+"imagiologia/30.png",
+"imagiologia/31.png",
+"imagiologia/32.png",
+"imagiologia/33.png",
+"imagiologia/34.png",
+"imagiologia/35.png",
+"imagiologia/36.png",
+"imagiologia/37.png",
+"imagiologia/38.png",
+"imagiologia/39.png",
+"imagiologia/40.png",
+"imagiologia/41.png",
+"imagiologia/42.png",
+"imagiologia/43.png",
+"imagiologia/44.png",
+"imagiologia/45.png",
+"imagiologia/46.png",
+"imagiologia/47.png",
+"imagiologia/48.png",
+"imagiologia/49.png",
+"imagiologia/50.png",
+"imagiologia/51.png",
+"imagiologia/52.png",
+"imagiologia/53.png",
+"imagiologia/54.png",
+"imagiologia/55.png",
+"imagiologia/56.png",
+"imagiologia/57.png",
+"imagiologia/58.png",
+"imagiologia/59.png",
+"imagiologia/60.png",
+"imagiologia/61.png",
+"imagiologia/62.png",
+"imagiologia/63.png",
+"imagiologia/64.png",
+"imagiologia/65.png",
+"imagiologia/66.png",
+"imagiologia/67.png",
+"imagiologia/68.png",
+"imagiologia/69.png",
+"imagiologia/70.png",
+"imagiologia/71.png",
+"imagiologia/72.png",
+"imagiologia/73.png",
+"imagiologia/74.png",
+"imagiologia/75.png",
+"imagiologia/76.png",
+"imagiologia/77.png",
+"imagiologia/78.png",
+"imagiologia/79.png",
+"imagiologia/80.png",
+"imagiologia/81.png",
+"imagiologia/82.png",
+"imagiologia/83.png",
+"imagiologia/84.png",
+"imagiologia/85.png",
+"imagiologia/86.png",
+"imagiologia/87.png",
+"imagiologia/88.png",
+"imagiologia/89.png",
+"imagiologia/90.png",
+"imagiologia/91.png",
+"imagiologia/92.png",
+"imagiologia/93.png",
+"imagiologia/94.png",
+"imagiologia/95.png",
+"imagiologia/96.png",
+"imagiologia/97.png",
+"imagiologia/98.png",
+"imagiologia/99.png",
+"imagiologia/100.png",
+"imagiologia/101.png",
+"imagiologia/102.png",
+"imagiologia/103.png",
+"imagiologia/104.png",
+"imagiologia/105.png",
+"imagiologia/106.png",
+"imagiologia/107.png",
+"imagiologia/108.png",
+"imagiologia/109.png",
+"imagiologia/110.png",
+"imagiologia/111.png",
+"imagiologia/112.png",
+"imagiologia/113.png",
+"imagiologia/114.png",
+"imagiologia/115.png",
+"imagiologia/116.png",
+"imagiologia/117.png",
+"imagiologia/118.png",
+"imagiologia/119.png",
+"imagiologia/120.png",
+"imagiologia/121.png",
+"imagiologia/122.png",
+"imagiologia/123.png",
+"imagiologia/124.png",
+"imagiologia/125.png",
+"imagiologia/126.png",
+"imagiologia/127.png",
+"imagiologia/128.png",
+"imagiologia/129.png",
+"imagiologia/130.png",
+"imagiologia/131.png",
+"imagiologia/132.png",
+"imagiologia/133.png",
+"imagiologia/134.png",
+"imagiologia/135.png",
+"imagiologia/136.png",
+"imagiologia/137.png",
+"imagiologia/138.png",
+"imagiologia/139.png"
+    ];
+
+    const frame = document.getElementById("frame");
+
+    let currentFrame = 0;
+    let targetFrame = 0;
+
+  const sensitivity = 0.012;
+const smoothness = 0.08;
+
+    // Pré-carregar imagens
+    const loadedImages = images.map(src => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
+
+    // Detetar scroll
+    window.addEventListener("wheel", (event) => {
+
+      event.preventDefault();
+
+      const speed = Math.abs(event.deltaY);
+
+      if (event.deltaY < 0) {
+        // Scroll para cima: avançar
+        targetFrame += speed * sensitivity;
+      }
+
+      else if (event.deltaY > 0) {
+        // Scroll para baixo: recuar
+        targetFrame -= speed * sensitivity;
+      }
+
+      targetFrame = Math.max(
+        0,
+        Math.min(images.length - 1, targetFrame)
+      );
+
+    }, { passive: false });
+
+    // Atualizar animação
+    function animate() {
+
+      currentFrame +=
+        (targetFrame - currentFrame) * smoothness;
+
+      const index = Math.round(currentFrame);
+
+      if (frame.src !== loadedImages[index].src &&
+          loadedImages[index].complete &&
+          loadedImages[index].naturalWidth > 0) {
+
+        frame.src = loadedImages[index].src;
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+  </script>
+
+</body>
+</html>
