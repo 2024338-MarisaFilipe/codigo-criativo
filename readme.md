@@ -27,4 +27,4 @@ Cicatrização (**Conceito**) + Interação de Imagens com Áudio (**Input**) + 
 
 #### Uso de LLMs (AI) 
 
-Utilizei os recursos Chatgpt, Ecosia AI e Gemini como ferramentas de acompanhamento/assistência e geração de código.
+Utilizei os recursos ChatGPT, Ecosia AI e Gemini como ferramentas de acompanhamento/assistência e geração de código.
