@@ -8,8 +8,8 @@ Com a configuração base pronta, já tinha em mente uma experiência em interse
 
 Através dos temas de fratura e instabilidade, representados pela próprias secções de fraturamento do crânio, decidi preencher estas feridas ou buracos escuros do cérebro com uma espécie de organismo ou textura viva que iria cicatrizar o que está furado por camadas. A tipografia seria representada de forma oral pelo "Cocktail", uma contração de todos os meus poemas para um poema com intensidade completa.
 
-![Experiencia de composição 1](processo1.png)
-![Experiencia de composição 2](processo2.png)
+![Experiencia de composição 1](processo\processo1.png)
+![Experiencia de composição 2](processo\processo2.png)
 
 Contudo, tive um bloqueio e não consegui decifrar como iria cicatrizar estas fraturas com composições antes de programar. O projeto final surgiu a partir desta problemática, tentando repensar no código como uma ligadura lógica e criativa a este bloqueio desta temática.
 
