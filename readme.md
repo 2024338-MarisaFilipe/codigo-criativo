@@ -8,6 +8,9 @@ Com a configuração base pronta, já tinha em mente uma experiência em interse
 
 Através dos temas de fratura e instabilidade, representados pela próprias secções de fraturamento do crânio, decidi preencher estas feridas ou buracos escuros do cérebro com uma espécie de organismo ou textura viva que iria cicatrizar o que está furado por camadas. A tipografia seria representada de forma oral pelo "Cocktail", uma contração de todos os meus poemas para um poema com intensidade completa.
 
+![Experiencia de composição 1](processo1.png)
+![Experiencia de composição 2](processo2.png)
+
 Contudo, tive um bloqueio e não consegui decifrar como iria cicatrizar estas fraturas com composições antes de programar. O projeto final surgiu a partir desta problemática, tentando repensar no código como uma ligadura lógica e criativa a este bloqueio desta temática.
 
 Escolhi a **fontes de dados ou input**:
@@ -26,12 +29,12 @@ As **formas de expressão** que defini foram:
 
 ##### Referências Visuais e Bibliotecas de Código
 Para explorar a conexão visual entre os pontos visitei alguns projetos artísticos de programação que disponibilizavam o próprio código e de forma concreta utilizei como base para formatar o meu como queria:
-[Hit testing](https://paperjs.org/examples/hit-testing/)
-[The best way to show an animation](https://stackoverflow.com/questions/23226710/what-is-the-best-way-to-show-an-animation-using-images-as-frames)
-[Load Sound](https://p5js.org/reference/p5/loadSound/)
-[Radial Rainbows](https://paperjs.org/examples/radial-rainbows/)
-[Javascript for Artists](https://javascriptforartists.com/)
-[Media Element](https://p5js.org/reference/p5.MediaElement/stop/)
+- [Hit testing](https://paperjs.org/examples/hit-testing/)
+- [The best way to show an animation](https://stackoverflow.com/questions/23226710/what-is-the-best-way-to-show-an-animation-using-images-as-frames)
+- [Load Sound](https://p5js.org/reference/p5/loadSound/)
+- [Radial Rainbows](https://paperjs.org/examples/radial-rainbows/)
+- [Javascript for Artists](https://javascriptforartists.com/)
+- [Media Element](https://p5js.org/reference/p5.MediaElement/stop/)
 
 #### Uso de LLMs (AI) e Processo Simplificado do Código
 
