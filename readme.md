@@ -29,10 +29,8 @@ As **formas de expressão** que defini foram:
 Para explorar a conexão visual entre os pontos visitei alguns projetos artísticos de programação que disponibilizavam o próprio código e de forma concreta utilizei como base para formatar o meu como queria:
 - [Hit testing](https://paperjs.org/examples/hit-testing/)
 - [The best way to show an animation](https://stackoverflow.com/questions/23226710/what-is-the-best-way-to-show-an-animation-using-images-as-frames)
-- [Load Sound](https://p5js.org/reference/p5/loadSound/)
 - [Radial Rainbows](https://paperjs.org/examples/radial-rainbows/)
 - [Javascript for Artists](https://javascriptforartists.com/)
-- [Media Element](https://p5js.org/reference/p5.MediaElement/stop/)
 
 #### Uso de LLMs (AI) e Processo Simplificado do Código
 
